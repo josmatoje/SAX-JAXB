@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="APUESTAS@107-13">
+  <database-model serializer="dbm" dbms="MSSQL" family-id="MSSQL" format-version="4.20">
+    <root id="1">
+      <ServerVersion>14.0.2027</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="APUESTAS">
+      <ObjectId>6</ObjectId>
+      <Current>1</Current>
+      <Collation>Modern_Spanish_CI_AS</Collation>
+      <Fingerprint>6.44230/93EE7F87-923E-46E4-8D17-93EA145564AD@107-21</Fingerprint>
+    </database>
+    <database id="3" parent="1" name="AlmacenesLeo">
+      <ObjectId>5</ObjectId>
+      <Collation>Modern_Spanish_CI_AS</Collation>
+    </database>
+    <database id="4" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+      <Collation>Modern_Spanish_CI_AS</Collation>
+    </database>
+    <database id="5" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+      <Collation>Modern_Spanish_CI_AS</Collation>
+    </database>
+    <database id="6" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+      <Collation>Modern_Spanish_CI_AS</Collation>
+    </database>
+    <database id="7" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+      <Collation>Modern_Spanish_CI_AS</Collation>
+    </database>
+    <schema id="8" parent="2" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="9" parent="2" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="17" parent="2" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="18" parent="2" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2021-02-05.12:01:13.603</IntrospectionTimestamp>
+      <Current>1</Current>
+    </schema>
+    <schema id="19" parent="2" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="20" parent="2" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <table id="21" parent="18" name="APUESTAS">
+      <ObjectId>1205579333</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.723</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:44:01.770</ModifiedTimestamp>
+    </table>
+    <table id="22" parent="18" name="APUESTAS_POR_GANADOR">
+      <ObjectId>1349579846</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.730</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.757</ModifiedTimestamp>
+    </table>
+    <table id="23" parent="18" name="APUESTAS_POR_PUNTUACION">
+      <ObjectId>1413580074</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.730</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.757</ModifiedTimestamp>
+    </table>
+    <table id="24" parent="18" name="APUESTAS_POR_TIPO_DE_VICTORIA">
+      <ObjectId>1461580245</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.730</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.760</ModifiedTimestamp>
+    </table>
+    <table id="25" parent="18" name="BOXEADORES">
+      <ObjectId>1173579219</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.723</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.737</ModifiedTimestamp>
+    </table>
+    <table id="26" parent="18" name="COMBATES">
+      <ObjectId>1061578820</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.720</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.767</ModifiedTimestamp>
+    </table>
+    <table id="27" parent="18" name="COMPETICIONES">
+      <ObjectId>1509580416</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.733</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.737</ModifiedTimestamp>
+    </table>
+    <table id="28" parent="18" name="PUNTUACIONES">
+      <ObjectId>1589580701</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.737</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.763</ModifiedTimestamp>
+    </table>
+    <table id="29" parent="18" name="TRANSACCIONES">
+      <ObjectId>981578535</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.717</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.717</ModifiedTimestamp>
+    </table>
+    <table id="30" parent="18" name="USUARIOS">
+      <ObjectId>901578250</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.710</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.740</ModifiedTimestamp>
+    </table>
+    <view id="31" parent="18" name="ApuestaTipo">
+      <ObjectId>1669580986</ObjectId>
+      <SourceTextLength>542</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.740</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.740</ModifiedTimestamp>
+    </view>
+    <routine id="32" parent="18" name="GANADOR">
+      <ObjectId>1877581727</ObjectId>
+      <SourceTextLength>1296</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.763</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.763</ModifiedTimestamp>
+      <RoutineType>scalar-fun</RoutineType>
+    </routine>
+    <routine id="33" parent="18" name="InstertarApuesta">
+      <ObjectId>2005582183</ObjectId>
+      <SourceTextLength>892</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:44:21.150</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:44:21.150</ModifiedTimestamp>
+      <RoutineType>proc</RoutineType>
+    </routine>
+    <routine id="34" parent="18" name="RESULTADO_APUESTA">
+      <ObjectId>1925581898</ObjectId>
+      <SourceTextLength>695</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.770</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.770</ModifiedTimestamp>
+      <RoutineType>scalar-fun</RoutineType>
+    </routine>
+    <routine id="35" parent="18" name="RESULTADO_APUESTA_POR_GANADOR">
+      <ObjectId>1973582069</ObjectId>
+      <SourceTextLength>532</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.777</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.777</ModifiedTimestamp>
+      <RoutineType>scalar-fun</RoutineType>
+    </routine>
+    <routine id="36" parent="18" name="RESULTADO_APUESTA_POR_PUNTUACION">
+      <ObjectId>1941581955</ObjectId>
+      <SourceTextLength>743</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.773</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.773</ModifiedTimestamp>
+      <RoutineType>scalar-fun</RoutineType>
+    </routine>
+    <routine id="37" parent="18" name="RESULTADO_APUESTA_POR_TIPO_DE_VICTORIA">
+      <ObjectId>1957582012</ObjectId>
+      <SourceTextLength>609</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.773</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.773</ModifiedTimestamp>
+      <RoutineType>scalar-fun</RoutineType>
+    </routine>
+    <routine id="38" parent="18" name="TIPO_VICTORIA">
+      <ObjectId>1797581442</ObjectId>
+      <SourceTextLength>509</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.753</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.753</ModifiedTimestamp>
+      <RoutineType>scalar-fun</RoutineType>
+    </routine>
+    <column id="39" parent="21" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="21" name="NOMBRE_USUARIO">
+      <Position>2</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+    </column>
+    <column id="41" parent="21" name="ID_COMBATE">
+      <Position>3</Position>
+      <DataType>smallint|0s</DataType>
+    </column>
+    <column id="42" parent="21" name="CANTIDAD">
+      <Position>4</Position>
+      <DataType>smallmoney|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="21" name="FECHA">
+      <Position>5</Position>
+      <DefaultConstraintName>DF__APUESTAS__FECHA__4D94879B</DefaultConstraintName>
+      <DefaultExpression>getdate()</DefaultExpression>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="21" name="CUOTA">
+      <Position>6</Position>
+      <DataType>numeric(18)|0s</DataType>
+    </column>
+    <column id="45" parent="21" name="SE_HA_RESUELTO">
+      <Position>7</Position>
+      <DefaultConstraintName>DF__APUESTAS__SE_HA___4F7CD00D</DefaultConstraintName>
+      <DefaultExpression>0</DefaultExpression>
+      <DataType>bit|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="46" parent="21" name="PK__APUESTAS__3214EC27AFFE4C18">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <index id="47" parent="21" name="UN_APUESTAS">
+      <Position>2</Position>
+      <ColNames>NOMBRE_USUARIO
+ID_COMBATE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="48" parent="21" name="PK__APUESTAS__3214EC27AFFE4C18">
+      <ObjectId>1221579390</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.727</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.727</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PK__APUESTAS__3214EC27AFFE4C18</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="49" parent="21" name="UN_APUESTAS">
+      <ObjectId>1237579447</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.727</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.727</ModifiedTimestamp>
+      <ColNames>NOMBRE_USUARIO
+ID_COMBATE</ColNames>
+      <UnderlyingIndexName>UN_APUESTAS</UnderlyingIndexName>
+    </key>
+    <foreign-key id="50" parent="21" name="FK__APUESTAS__NOMBRE__4AB81AF0">
+      <ObjectId>1253579504</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.727</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.727</ModifiedTimestamp>
+      <ColNames>NOMBRE_USUARIO</ColNames>
+      <RefTableId>901578250</RefTableId>
+      <RefTableName>USUARIOS</RefTableName>
+      <RefKeyName>PK__USUARIOS__B21D0AB8DDC516E7</RefKeyName>
+      <RefColNames>NOMBRE</RefColNames>
+    </foreign-key>
+    <foreign-key id="51" parent="21" name="FK__APUESTAS__ID_COM__4BAC3F29">
+      <ObjectId>1269579561</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.727</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.727</ModifiedTimestamp>
+      <ColNames>ID_COMBATE</ColNames>
+      <RefTableId>1061578820</RefTableId>
+      <RefTableName>COMBATES</RefTableName>
+      <RefKeyName>PK__COMBATES__3214EC27CD53A39A</RefKeyName>
+      <RefColNames>ID</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <check id="52" parent="21" name="CK__APUESTAS__CANTID__4CA06362">
+      <ObjectId>1285579618</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.727</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.727</ModifiedTimestamp>
+      <ColNames>CANTIDAD</ColNames>
+      <Predicate>[CANTIDAD]&gt;0</Predicate>
+    </check>
+    <check id="53" parent="21" name="CK__APUESTAS__CUOTA__4E88ABD4">
+      <ObjectId>1317579732</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.727</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.727</ModifiedTimestamp>
+      <ColNames>CUOTA</ColNames>
+      <Predicate>[CUOTA]&gt;0</Predicate>
+    </check>
+    <default id="54" parent="21" name="DF__APUESTAS__FECHA__4D94879B">
+      <ObjectId>1301579675</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2021-02-05.11:43:52.727</ModifiedTimestamp>
+      <ColNames>FECHA</ColNames>
+      <DefaultExpression>getdate()</DefaultExpression>
+    </default>
+    <default id="55" parent="21" name="DF__APUESTAS__SE_HA___4F7CD00D">
+      <ObjectId>1333579789</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2021-02-05.11:43:52.727</ModifiedTimestamp>
+      <ColNames>SE_HA_RESUELTO</ColNames>
+      <DefaultExpression>0</DefaultExpression>
+    </default>
+    <trigger id="56" parent="21" name="ApuestaAbierta">
+      <ObjectId>1781581385</ObjectId>
+      <SourceTextLength>607</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.750</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.750</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <trigger id="57" parent="21" name="Cuota">
+      <ObjectId>1989582126</ObjectId>
+      <SourceTextLength>901</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.777</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.777</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <trigger id="58" parent="21" name="QUITAR_SALDO_APUESTA">
+      <ObjectId>1701581100</ObjectId>
+      <SourceTextLength>346</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.743</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.743</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <trigger id="59" parent="21" name="RESOLVER_APUESTA">
+      <ObjectId>1909581841</ObjectId>
+      <SourceTextLength>623</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.770</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.770</ModifiedTimestamp>
+      <Events>U</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <trigger id="60" parent="21" name="IMPEDIR_CAMBIAR_APUESTA">
+      <ObjectId>1717581157</ObjectId>
+      <SourceTextLength>245</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.743</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:44:01.770</ModifiedTimestamp>
+      <Events>UD</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <column id="61" parent="22" name="ID_APUESTA">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="22" name="NOMBRE_GANADOR">
+      <Position>2</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <index id="63" parent="22" name="PK__APUESTAS__DCF137FFBF64F581">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID_APUESTA</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="64" parent="22" name="PK__APUESTAS__DCF137FFBF64F581">
+      <ObjectId>1365579903</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.730</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.730</ModifiedTimestamp>
+      <ColNames>ID_APUESTA</ColNames>
+      <UnderlyingIndexName>PK__APUESTAS__DCF137FFBF64F581</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="65" parent="22" name="FK__APUESTAS___ID_AP__52593CB8">
+      <ObjectId>1381579960</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.730</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.730</ModifiedTimestamp>
+      <ColNames>ID_APUESTA</ColNames>
+      <RefTableId>1205579333</RefTableId>
+      <RefTableName>APUESTAS</RefTableName>
+      <RefKeyName>PK__APUESTAS__3214EC27AFFE4C18</RefKeyName>
+      <RefColNames>ID</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="66" parent="22" name="FK__APUESTAS___NOMBR__534D60F1">
+      <ObjectId>1397580017</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.730</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.730</ModifiedTimestamp>
+      <ColNames>NOMBRE_GANADOR</ColNames>
+      <RefTableId>1173579219</RefTableId>
+      <RefTableName>BOXEADORES</RefTableName>
+      <RefKeyName>PK__BOXEADOR__B21D0AB83F91F01F</RefKeyName>
+      <RefColNames>NOMBRE</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <trigger id="67" parent="22" name="ASEGURAR_GENERALIZACION_CORRECTA_GANADOR">
+      <ObjectId>1733581214</ObjectId>
+      <SourceTextLength>442</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.747</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.747</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <trigger id="68" parent="22" name="ApuestaLimiteGanador">
+      <ObjectId>1813581499</ObjectId>
+      <SourceTextLength>1856</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.757</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.757</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <column id="69" parent="23" name="ID_APUESTA">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="23" name="PUNTUACION">
+      <Position>2</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="71" parent="23" name="PK__APUESTAS__DCF137FF05746F27">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID_APUESTA</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="72" parent="23" name="PK__APUESTAS__DCF137FF05746F27">
+      <ObjectId>1429580131</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.730</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.730</ModifiedTimestamp>
+      <ColNames>ID_APUESTA</ColNames>
+      <UnderlyingIndexName>PK__APUESTAS__DCF137FF05746F27</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="73" parent="23" name="FK__APUESTAS___ID_AP__5629CD9C">
+      <ObjectId>1445580188</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.730</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.730</ModifiedTimestamp>
+      <ColNames>ID_APUESTA</ColNames>
+      <RefTableId>1205579333</RefTableId>
+      <RefTableName>APUESTAS</RefTableName>
+      <RefKeyName>PK__APUESTAS__3214EC27AFFE4C18</RefKeyName>
+      <RefColNames>ID</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <trigger id="74" parent="23" name="ASEGURAR_GENERALIZACION_CORRECTA_PUNTUACION">
+      <ObjectId>1749581271</ObjectId>
+      <SourceTextLength>322</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.747</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.747</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <trigger id="75" parent="23" name="ApuestaLimitePuntuacion">
+      <ObjectId>1829581556</ObjectId>
+      <SourceTextLength>1695</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.757</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.757</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <column id="76" parent="24" name="ID_APUESTA">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="24" name="TIPO_DE_VICTORIA">
+      <Position>2</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="78" parent="24" name="PK__APUESTAS__DCF137FFED213E5B">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID_APUESTA</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="79" parent="24" name="PK__APUESTAS__DCF137FFED213E5B">
+      <ObjectId>1477580302</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.733</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.733</ModifiedTimestamp>
+      <ColNames>ID_APUESTA</ColNames>
+      <UnderlyingIndexName>PK__APUESTAS__DCF137FFED213E5B</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="80" parent="24" name="FK__APUESTAS___ID_AP__59063A47">
+      <ObjectId>1493580359</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.733</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.733</ModifiedTimestamp>
+      <ColNames>ID_APUESTA</ColNames>
+      <RefTableId>1205579333</RefTableId>
+      <RefTableName>APUESTAS</RefTableName>
+      <RefKeyName>PK__APUESTAS__3214EC27AFFE4C18</RefKeyName>
+      <RefColNames>ID</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <trigger id="81" parent="24" name="ASEGURAR_GENERALIZACION_CORRECTA_TIPO">
+      <ObjectId>1765581328</ObjectId>
+      <SourceTextLength>322</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.750</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.750</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <trigger id="82" parent="24" name="ApuestaLimiteTipoVictoria">
+      <ObjectId>1845581613</ObjectId>
+      <SourceTextLength>1442</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.760</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.760</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <column id="83" parent="25" name="NOMBRE">
+      <Position>1</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="84" parent="25" name="PK__BOXEADOR__B21D0AB83F91F01F">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>NOMBRE</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="85" parent="25" name="PK__BOXEADOR__B21D0AB83F91F01F">
+      <ObjectId>1189579276</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.723</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.723</ModifiedTimestamp>
+      <ColNames>NOMBRE</ColNames>
+      <UnderlyingIndexName>PK__BOXEADOR__B21D0AB83F91F01F</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="86" parent="26" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="26" name="FECHA_INICIO">
+      <Position>2</Position>
+      <DataType>smalldatetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="88" parent="26" name="FECHA_FIN">
+      <Position>3</Position>
+      <DataType>smalldatetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="26" name="ADMITE_APUESTAS">
+      <Position>4</Position>
+      <DefaultConstraintName>DF__COMBATES__ADMITE__412EB0B6</DefaultConstraintName>
+      <DefaultExpression>0</DefaultExpression>
+      <DataType>bit|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="26" name="MAX_APUESTAS_POR_GANADOR">
+      <Position>5</Position>
+      <DataType>smallmoney|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="26" name="MAX_APUESTAS_POR_TIPO_VICTORIA">
+      <Position>6</Position>
+      <DataType>smallmoney|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="26" name="MAX_APUESTAS_POR_PUNTUACION">
+      <Position>7</Position>
+      <DataType>smallmoney|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="93" parent="26" name="PK__COMBATES__3214EC27CD53A39A">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="94" parent="26" name="PK__COMBATES__3214EC27CD53A39A">
+      <ObjectId>1077578877</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.720</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.720</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PK__COMBATES__3214EC27CD53A39A</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <check id="95" parent="26" name="CK_FECHA_COMBATES">
+      <ObjectId>1157579162</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.723</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.723</ModifiedTimestamp>
+      <Predicate>[FECHA_INICIO]&lt;[FECHA_FIN]</Predicate>
+    </check>
+    <check id="96" parent="26" name="CK__COMBATES__MAX_AP__4222D4EF">
+      <ObjectId>1109578991</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.720</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.720</ModifiedTimestamp>
+      <ColNames>MAX_APUESTAS_POR_GANADOR</ColNames>
+      <Predicate>[MAX_APUESTAS_POR_GANADOR]&gt;=0</Predicate>
+    </check>
+    <check id="97" parent="26" name="CK__COMBATES__MAX_AP__440B1D61">
+      <ObjectId>1141579105</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.723</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.723</ModifiedTimestamp>
+      <ColNames>MAX_APUESTAS_POR_PUNTUACION</ColNames>
+      <Predicate>[MAX_APUESTAS_POR_PUNTUACION]&gt;=0</Predicate>
+    </check>
+    <check id="98" parent="26" name="CK__COMBATES__MAX_AP__4316F928">
+      <ObjectId>1125579048</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.720</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.720</ModifiedTimestamp>
+      <ColNames>MAX_APUESTAS_POR_TIPO_VICTORIA</ColNames>
+      <Predicate>[MAX_APUESTAS_POR_TIPO_VICTORIA]&gt;=0</Predicate>
+    </check>
+    <default id="99" parent="26" name="DF__COMBATES__ADMITE__412EB0B6">
+      <ObjectId>1093578934</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2021-02-05.11:43:52.720</ModifiedTimestamp>
+      <ColNames>ADMITE_APUESTAS</ColNames>
+      <DefaultExpression>0</DefaultExpression>
+    </default>
+    <trigger id="100" parent="26" name="CERRAR_APUESTAS">
+      <ObjectId>1893581784</ObjectId>
+      <SourceTextLength>627</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.767</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.767</ModifiedTimestamp>
+      <Events>U</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <column id="101" parent="27" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="102" parent="27" name="ID_COMBATE">
+      <Position>2</Position>
+      <DataType>smallint|0s</DataType>
+    </column>
+    <column id="103" parent="27" name="NOMBRE_BOXEADOR">
+      <Position>3</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </column>
+    <index id="104" parent="27" name="PK__COMPETIC__3214EC276775999B">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <index id="105" parent="27" name="UN_COMPETICIONES">
+      <Position>2</Position>
+      <ColNames>ID_COMBATE
+NOMBRE_BOXEADOR</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="106" parent="27" name="PK__COMPETIC__3214EC276775999B">
+      <ObjectId>1525580473</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.733</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.733</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PK__COMPETIC__3214EC276775999B</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="107" parent="27" name="UN_COMPETICIONES">
+      <ObjectId>1541580530</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.737</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.737</ModifiedTimestamp>
+      <ColNames>ID_COMBATE
+NOMBRE_BOXEADOR</ColNames>
+      <UnderlyingIndexName>UN_COMPETICIONES</UnderlyingIndexName>
+    </key>
+    <foreign-key id="108" parent="27" name="FK__COMPETICI__ID_CO__5CD6CB2B">
+      <ObjectId>1557580587</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.737</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.737</ModifiedTimestamp>
+      <ColNames>ID_COMBATE</ColNames>
+      <RefTableId>1061578820</RefTableId>
+      <RefTableName>COMBATES</RefTableName>
+      <RefKeyName>PK__COMBATES__3214EC27CD53A39A</RefKeyName>
+      <RefColNames>ID</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="109" parent="27" name="FK__COMPETICI__NOMBR__5DCAEF64">
+      <ObjectId>1573580644</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.737</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.737</ModifiedTimestamp>
+      <ColNames>NOMBRE_BOXEADOR</ColNames>
+      <RefTableId>1173579219</RefTableId>
+      <RefTableName>BOXEADORES</RefTableName>
+      <RefKeyName>PK__BOXEADOR__B21D0AB83F91F01F</RefKeyName>
+      <RefColNames>NOMBRE</RefColNames>
+      <OnDelete>set-null</OnDelete>
+    </foreign-key>
+    <column id="110" parent="28" name="ID_COMPETICION">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="111" parent="28" name="RONDA">
+      <Position>2</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="112" parent="28" name="PUNTUACION">
+      <Position>3</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="113" parent="28" name="PK_PUNTUACIONES">
+      <Position>1</Position>
+      <ColNames>ID_COMPETICION
+RONDA</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="114" parent="28" name="PK_PUNTUACIONES">
+      <ObjectId>1605580758</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.737</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.737</ModifiedTimestamp>
+      <ColNames>ID_COMPETICION
+RONDA</ColNames>
+      <UnderlyingIndexName>PK_PUNTUACIONES</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="115" parent="28" name="FK__PUNTUACIO__ID_CO__60A75C0F">
+      <ObjectId>1621580815</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.737</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.737</ModifiedTimestamp>
+      <ColNames>ID_COMPETICION</ColNames>
+      <RefTableId>1509580416</RefTableId>
+      <RefTableName>COMPETICIONES</RefTableName>
+      <RefKeyName>PK__COMPETIC__3214EC276775999B</RefKeyName>
+      <RefColNames>ID</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <check id="116" parent="28" name="CK__PUNTUACIO__PUNTU__628FA481">
+      <ObjectId>1653580929</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.737</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.737</ModifiedTimestamp>
+      <ColNames>PUNTUACION</ColNames>
+      <Predicate>[PUNTUACION]&gt;=0</Predicate>
+    </check>
+    <check id="117" parent="28" name="CK__PUNTUACIO__RONDA__619B8048">
+      <ObjectId>1637580872</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.737</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.737</ModifiedTimestamp>
+      <ColNames>RONDA</ColNames>
+      <Predicate>[RONDA]&gt;0</Predicate>
+    </check>
+    <trigger id="118" parent="28" name="ASEGURAR_NO_MAS_RONDAS_DESPUES_KNOCKOUT">
+      <ObjectId>1861581670</ObjectId>
+      <SourceTextLength>976</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.763</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.763</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <column id="119" parent="29" name="ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="120" parent="29" name="NOMBRE_USUARIO">
+      <Position>2</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+    </column>
+    <column id="121" parent="29" name="FECHA">
+      <Position>3</Position>
+      <DefaultConstraintName>DF__TRANSACCI__FECHA__3D5E1FD2</DefaultConstraintName>
+      <DefaultExpression>getdate()</DefaultExpression>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <column id="122" parent="29" name="IMPORTE">
+      <Position>4</Position>
+      <DataType>smallmoney|0s</DataType>
+    </column>
+    <index id="123" parent="29" name="PK__TRANSACC__3214EC2787B252FF">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="124" parent="29" name="PK__TRANSACC__3214EC2787B252FF">
+      <ObjectId>997578592</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.720</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.720</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>PK__TRANSACC__3214EC2787B252FF</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="125" parent="29" name="FK__TRANSACCI__NOMBR__3C69FB99">
+      <ObjectId>1013578649</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.720</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.720</ModifiedTimestamp>
+      <ColNames>NOMBRE_USUARIO</ColNames>
+      <RefTableId>901578250</RefTableId>
+      <RefTableName>USUARIOS</RefTableName>
+      <RefKeyName>PK__USUARIOS__B21D0AB8DDC516E7</RefKeyName>
+      <RefColNames>NOMBRE</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <check id="126" parent="29" name="CK__TRANSACCI__IMPOR__3E52440B">
+      <ObjectId>1045578763</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.720</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.720</ModifiedTimestamp>
+      <ColNames>IMPORTE</ColNames>
+      <Predicate>[IMPORTE]&lt;&gt;0</Predicate>
+    </check>
+    <default id="127" parent="29" name="DF__TRANSACCI__FECHA__3D5E1FD2">
+      <ObjectId>1029578706</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2021-02-05.11:43:52.720</ModifiedTimestamp>
+      <ColNames>FECHA</ColNames>
+      <DefaultExpression>getdate()</DefaultExpression>
+    </default>
+    <column id="128" parent="30" name="NOMBRE">
+      <Position>1</Position>
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="129" parent="30" name="EMAIL">
+      <Position>2</Position>
+      <DataType>varchar(100 char)|0s</DataType>
+    </column>
+    <column id="130" parent="30" name="CONTRASENA">
+      <Position>3</Position>
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="131" parent="30" name="SALDO">
+      <Position>4</Position>
+      <DefaultConstraintName>DF__USUARIOS__SALDO__38996AB5</DefaultConstraintName>
+      <DefaultExpression>0</DefaultExpression>
+      <DataType>smallmoney|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="132" parent="30" name="PK__USUARIOS__B21D0AB8DDC516E7">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>NOMBRE</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <index id="133" parent="30" name="UQ__USUARIOS__161CF72423E57EB3">
+      <Position>2</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>EMAIL</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="134" parent="30" name="PK__USUARIOS__B21D0AB8DDC516E7">
+      <ObjectId>917578307</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.713</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.713</ModifiedTimestamp>
+      <ColNames>NOMBRE</ColNames>
+      <UnderlyingIndexName>PK__USUARIOS__B21D0AB8DDC516E7</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="135" parent="30" name="UQ__USUARIOS__161CF72423E57EB3">
+      <ObjectId>933578364</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2021-02-05.11:43:52.717</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.717</ModifiedTimestamp>
+      <ColNames>EMAIL</ColNames>
+      <UnderlyingIndexName>UQ__USUARIOS__161CF72423E57EB3</UnderlyingIndexName>
+    </key>
+    <check id="136" parent="30" name="US_SALDO_POSITIVO">
+      <ObjectId>965578478</ObjectId>
+      <CreatedTimestamp>2021-02-05.11:43:52.717</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.717</ModifiedTimestamp>
+      <ColNames>SALDO</ColNames>
+      <Predicate>[SALDO]&gt;=0</Predicate>
+    </check>
+    <default id="137" parent="30" name="DF__USUARIOS__SALDO__38996AB5">
+      <ObjectId>949578421</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2021-02-05.11:43:52.717</ModifiedTimestamp>
+      <ColNames>SALDO</ColNames>
+      <DefaultExpression>0</DefaultExpression>
+    </default>
+    <trigger id="138" parent="30" name="CREAR_TRANSACCION">
+      <ObjectId>1685581043</ObjectId>
+      <SourceTextLength>432</SourceTextLength>
+      <CreatedTimestamp>2021-02-05.11:43:52.740</CreatedTimestamp>
+      <ModifiedTimestamp>2021-02-05.11:43:52.740</ModifiedTimestamp>
+      <Events>U</Events>
+      <Turn>after-stmt</Turn>
+    </trigger>
+    <column id="139" parent="31" name="ID">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="140" parent="31" name="TIPO">
+      <Position>2</Position>
+      <DataType>varchar(10 char)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <argument id="141" parent="32">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>varchar(50 char)|0s</DataType>
+    </argument>
+    <argument id="142" parent="32" name="@ID_COMBATE">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+    </argument>
+    <argument id="143" parent="33" name="@NOMBRE_USUARIO">
+      <Position>1</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+    </argument>
+    <argument id="144" parent="33" name="@ID_COMBATE">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="145" parent="33" name="@CANTIDAD">
+      <Position>3</Position>
+      <DataType>float|0s</DataType>
+    </argument>
+    <argument id="146" parent="33" name="@CUOTA">
+      <Position>4</Position>
+      <DataType>float|0s</DataType>
+    </argument>
+    <argument id="147" parent="33" name="@GANADOR">
+      <Position>5</Position>
+      <DataType>varchar(50 char)|0s</DataType>
+    </argument>
+    <argument id="148" parent="33" name="@PUNTUACION">
+      <Position>6</Position>
+      <DataType>smallint|0s</DataType>
+    </argument>
+    <argument id="149" parent="33" name="@TIPOVICTORIA">
+      <Position>7</Position>
+      <DataType>varchar(20 char)|0s</DataType>
+    </argument>
+    <argument id="150" parent="34">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="151" parent="34" name="@ID_APUESTA">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+    </argument>
+    <argument id="152" parent="35">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>bit|0s</DataType>
+    </argument>
+    <argument id="153" parent="35" name="@ID_APUESTA">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+    </argument>
+    <argument id="154" parent="36">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>bit|0s</DataType>
+    </argument>
+    <argument id="155" parent="36" name="@ID_APUESTA">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+    </argument>
+    <argument id="156" parent="37">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>bit|0s</DataType>
+    </argument>
+    <argument id="157" parent="37" name="@ID_APUESTA">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+    </argument>
+    <argument id="158" parent="38">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>varchar(50 char)|0s</DataType>
+    </argument>
+    <argument id="159" parent="38" name="@ID_COMBATE">
+      <Position>1</Position>
+      <DataType>smallint|0s</DataType>
+    </argument>
+  </database-model>
+</dataSource>

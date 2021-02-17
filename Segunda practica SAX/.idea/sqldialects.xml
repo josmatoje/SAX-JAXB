@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/Script apuestas.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Script datos.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Scripts Javi JoseMaria.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/src/GestoraBD.java" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/src/ParseadorApuestas.java" dialect="TSQL" />
+  </component>
+</project>
