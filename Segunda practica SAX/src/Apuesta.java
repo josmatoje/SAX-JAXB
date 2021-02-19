@@ -8,6 +8,7 @@ public class Apuesta {
     private String ganador;
     private int puntuacion;
     private TipoViiictoria tipoVictoria;
+    private String fecha;
 
     //Costructores
     public Apuesta(){//por defecto
@@ -18,6 +19,7 @@ public class Apuesta {
         this.ganador="Indefinido";
         this.puntuacion=-1;
         this.tipoVictoria=TipoViiictoria.JAVI;
+        this.fecha="Sin determinar";
     }
 
     //por parametros simple
@@ -100,4 +102,11 @@ public class Apuesta {
 
     public void setTipoVictoria(TipoViiictoria tipoVictoria) {this.tipoVictoria = tipoVictoria;}
 
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
 }

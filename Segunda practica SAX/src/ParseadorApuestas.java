@@ -32,8 +32,9 @@ public class ParseadorApuestas extends DefaultHandler {
     @Override
     public void startDocument(){
         try {
-            String sentPrep = "EXECUTE dbo.InstertarApuesta ?,?,?,?,?,?,?";
-            statementApuesta = conexionbbdd.prepareCall(sentPrep);
+            String sentPrepApuesta = "EXECUTE dbo.InstertarApuesta ?,?,?,?,?,?,?";
+            statementApuesta = conexionbbdd.prepareCall(sentPrepApuesta);
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

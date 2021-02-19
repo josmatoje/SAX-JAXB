@@ -22,8 +22,11 @@ public class GestoraBD {
             insertado=insertaApuesta.execute();
 
         } catch (SQLException throwables) {
+
             Incidencia incidencia=new Incidencia();
-                incidencia.setEvento(Integer.toString(apuesta.getCombate()));
+            incidencia.setUsuario(apuesta.getUsuario());
+            //incidencia.setFecha(); --> Necesitamos guardar la fecha
+            incidencia.setEvento(Integer.toString(apuesta.getCombate()));
         }
 
         return insertado;
