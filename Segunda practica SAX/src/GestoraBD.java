@@ -1,6 +1,10 @@
 import java.sql.*;
+import errores.*;
 
 public class GestoraBD {
+
+    private ManejadorErrores errorHandler;
+    private Incidencias incidenciasSucedidas;
 
     public static boolean insertarApuestaConTipo (Apuesta apuesta, CallableStatement insertaApuesta){
         boolean insertado=false;
@@ -18,7 +22,8 @@ public class GestoraBD {
             insertado=insertaApuesta.execute();
 
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            Incidencia incidencia=new Incidencia();
+                incidencia.setEvento(Integer.toString(apuesta.getCombate()));
         }
 
         return insertado;
