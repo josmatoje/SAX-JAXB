@@ -6,7 +6,7 @@ public class GestoraBD {
     private ManejadorErrores errorHandler;
     private Incidencias incidenciasSucedidas;
 
-    public static boolean insertarApuestaConTipo (Apuesta apuesta, CallableStatement insertaApuesta){
+    public static boolean insertarApuestaConTipo (Apuesta apuesta, CallableStatement insertaApuesta, ManejadorErrores me){
         boolean insertado=false;
 
         try {
@@ -27,6 +27,9 @@ public class GestoraBD {
             incidencia.setUsuario(apuesta.getUsuario());
             //incidencia.setFecha(); --> Necesitamos guardar la fecha
             incidencia.setEvento(Integer.toString(apuesta.getCombate()));
+            incidencia.setImporte(Float.toString(apuesta.getCantidad()));
+            incidencia.setMotivoRechazo(throwables.toString());
+            me.anhadirIncidencia(incidencia);
         }
 
         return insertado;

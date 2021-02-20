@@ -2,8 +2,11 @@
 @author Javi Ruiz y Jose Maria Mata
 *
  */
+import errores.ManejadorErrores;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
+
+import java.io.File;
 import java.sql.*;
 
 public class ParseadorApuestas extends DefaultHandler {
@@ -17,12 +20,17 @@ public class ParseadorApuestas extends DefaultHandler {
     private TipoViiictoria tipoVictoria;
     private final Connection conexionbbdd;
     private CallableStatement statementApuesta;
+    private ManejadorErrores me;
+    private File incidencias;
 
 
     //Constructor
     public ParseadorApuestas(){
         super();
         conexionbbdd = Conexion.abrirConexion();
+        me = new ManejadorErrores();
+        //Creamos el fichero en el que se almacenarán las incidencias que ocurran
+        incidencias = new File("src\\incidencias.xml");
     }
     //Get conexion
     public Connection getConexionbbdd() {
@@ -38,6 +46,8 @@ public class ParseadorApuestas extends DefaultHandler {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        me.abrirIncidenciasJAXB(incidencias);
+
     }
     @Override
     public void endDocument(){
@@ -46,6 +56,7 @@ public class ParseadorApuestas extends DefaultHandler {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        me.guardarIncidencias(incidencias);
     }
     @Override
     public void startElement(String uri, String nombre, String nombreC, Attributes att){
@@ -104,7 +115,7 @@ public class ParseadorApuestas extends DefaultHandler {
                     break;
 
                 }
-                GestoraBD.insertarApuestaConTipo(apuestaActual,statementApuesta);
+                GestoraBD.insertarApuestaConTipo(apuestaActual,statementApuesta, me);
                 //La fecha no se registra en el xml, se introduce en la insercion de datos en la BBDD
             break;
         }

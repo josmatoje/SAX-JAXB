@@ -8,8 +8,8 @@ SELECT TO apuestas
 
 
 	INSERT INTO COMBATES (FECHA_INICIO, FECHA_FIN, ADMITE_APUESTAS, MAX_APUESTAS_POR_GANADOR, MAX_APUESTAS_POR_TIPO_VICTORIA, MAX_APUESTAS_POR_PUNTUACION) VALUES
-	('01/5/21', '02/5/21', 1, 1000, 1000, 10000),
-	('05/8/21', '06/8/21', 1, 1000, 1000, 1000)
+	('01/5/21', '02/5/21', 1, 100000, 100000, 100000),
+	('05/8/21', '06/8/21', 1, 100000, 100000, 100000)
 
     INSERT INTO COMPETICIONES (ID_COMBATE, NOMBRE_BOXEADOR) VALUES
     (3, 'Paco Abreu'),
@@ -19,10 +19,7 @@ SELECT TO apuestas
 
 	GO
 	--Inserta una apuesta en la tabla apuestas y hace una insercion en la tabla tipo de apuestas
-    --
-	--CREATE --OR 
-	ALTER 
-	PROCEDURE InstertarApuesta
+    CREATE OR ALTER PROCEDURE InstertarApuesta
         @NOMBRE_USUARIO VarChar(20),
         @ID_COMBATE Int,
         @CANTIDAD float,
@@ -30,21 +27,17 @@ SELECT TO apuestas
         @GANADOR VARCHAR(50),
         @PUNTUACION SMALLINT,
         @TIPOVICTORIA VARCHAR(20),
-		--Añadir OUTPUT para fecha
-		@FECHA CHAR(10) OUTPUT
+		@FECHA CHAR(10)
     AS
     BEGIN
 	DECLARE @IDINSERTADO SMALLINT --Variable para almacenar el nuevo ID
 	BEGIN TRANSACTION
         INSERT INTO APUESTAS(NOMBRE_USUARIO,ID_COMBATE,CANTIDAD,CUOTA) VALUES (@NOMBRE_USUARIO,@ID_COMBATE,@CANTIDAD,@CUOTA)
-		SET @FECHA = (SELECT FECHA FROM APUESTAS WHERE @@IDENTITY=ID)
-
 		SELECT @IDINSERTADO = MAX(ID) FROM APUESTAS --@@IDENTITY daba problemas al usarlo, no sacaba el ultimo ID generado y entraba en conflicto con las FK de las tablas de tipo de apuestas
 			WHERE @NOMBRE_USUARIO=NOMBRE_USUARIO AND
 					@ID_COMBATE=ID_COMBATE AND
-					@CANTIDAD=CANTIDAD AND
-					@CUOTA=CUOTA				--Condiciones del where necesarias en caso de no insertar apuesta correctamente es necesario
-		SELECT @IDINSERTADO
+					@CANTIDAD=CANTIDAD 	--Condiciones del where necesarias en caso de no insertar apuesta correctamente es necesario
+					--Cuota se modifica, no es igual la insertada que la que aparece en la tabla
 		IF (@IDINSERTADO IS NOT NULL)
 		BEGIN
 			IF (@TIPOVICTORIA = 'JAVI' AND @PUNTUACION =-1)
@@ -56,37 +49,35 @@ SELECT TO apuestas
 					INSERT INTO APUESTAS_POR_PUNTUACION (ID_APUESTA, PUNTUACION) VALUES (@IDINSERTADO, @PUNTUACION)
 			
 			COMMIT
+			SELECT @FECHA= FECHA FROM APUESTAS
+				WHERE ID=@IDINSERTADO
 		END
 		ELSE
 			ROLLBACK
-			
     END
 GO
 
-
-
-select * from APUESTAS
-select * from BOXEADORES
-select * from COMBATES
-select * from APUESTAS_POR_GANADOR
-select * from APUESTAS_POR_PUNTUACION
-select * from APUESTAS_POR_TIPO_DE_VICTORIA
-select * from USUARIOS
-SELECT * FROM PUNTUACIONES
-SELECT * FROM COMPETICIONES
+--select * from BOXEADORES
+--select * from COMBATES
+--select * from APUESTAS
+--select * from APUESTAS_POR_GANADOR
+--select * from APUESTAS_POR_PUNTUACION
+--select * from APUESTAS_POR_TIPO_DE_VICTORIA
+--select * from USUARIOS
+--SELECT * FROM PUNTUACIONES
+--SELECT * FROM COMPETICIONES
+--SELECT * FROM TRANSACCIONES
 
 BEGIN TRANSACTION
-DECLARE @FECHA CHAR(10)
-SET @FECHA = (SELECT FECHA FROM APUESTAS WHERE 6=ID)
-					PRINT @FECHA
-EXECUTE InstertarApuesta 'Amador',3, 12, 3, 'Mac Janson', -1, 'JAVI', @FECHA OUTPUT;
-SELECT @FECHA
-EXECUTE InstertarApuesta 'Jesus',4, 8, 2.3, 'Mac Janson', -1, 'JAVI', @FECHA OUTPUT;
-SELECT @FECHA
+
+DECLARE @FECHA VARCHAR(10)
+
+EXECUTE InstertarApuesta 'Amador',3, 12, 3, 'Mac Janson', -1, 'JAVI', @FECHA
+EXECUTE InstertarApuesta 'Jesus',4, 8, 2.3, 'Mac Janson', -1, 'JAVI', @FECHA
 EXECUTE InstertarApuesta 'Alejandro',3, 4, 3, 'Indefinido', 7, 'JAVI', @FECHA
-EXECUTE InstertarApuesta 'Amador',4, 4, 38.46, 'Indefinido', 32, 'JAVI', @FECHA
+EXECUTE InstertarApuesta 'Amador',4, 4, 3, 'Indefinido', 32, 'JAVI', @FECHA
 EXECUTE InstertarApuesta 'Alejandro',4, 6.5, 3.14, 'Indefinido', -1, 'PUNTUACION', @FECHA
 EXECUTE InstertarApuesta 'Jesus',3, 7, 8.2, 'Indefinido', -1, 'KO', @FECHA
 
-ROLLBACK
+--ROLLBACK
 --commit
