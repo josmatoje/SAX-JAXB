@@ -20,8 +20,8 @@ public class ParseadorApuestas extends DefaultHandler {
     private TipoViiictoria tipoVictoria;
     private final Connection conexionbbdd;
     private CallableStatement statementApuesta;
-    private ManejadorErrores me;
-    private File incidencias;
+    private final ManejadorErrores me;
+    private final File incidencias;
 
 
     //Constructor
@@ -40,7 +40,7 @@ public class ParseadorApuestas extends DefaultHandler {
     @Override
     public void startDocument(){
         try {
-            String sentPrepApuesta = "EXECUTE dbo.InstertarApuesta ?,?,?,?,?,?,?";
+            String sentPrepApuesta = "EXECUTE dbo.InstertarApuesta ?,?,?,?,?,?,?,?";
             statementApuesta = conexionbbdd.prepareCall(sentPrepApuesta);
 
         } catch (SQLException throwables) {

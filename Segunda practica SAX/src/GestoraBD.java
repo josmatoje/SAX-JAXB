@@ -1,4 +1,6 @@
 import java.sql.*;
+import java.util.GregorianCalendar;
+
 import errores.*;
 
 public class GestoraBD {
@@ -8,7 +10,8 @@ public class GestoraBD {
 
     public static boolean insertarApuestaConTipo (Apuesta apuesta, CallableStatement insertaApuesta, ManejadorErrores me){
         boolean insertado=false;
-
+        GregorianCalendar fechaApuesta = new GregorianCalendar();
+        String fecha= fechaApuesta.toString();
         try {
 
             insertaApuesta.setString(1,apuesta.getUsuario());
@@ -18,14 +21,16 @@ public class GestoraBD {
             insertaApuesta.setString(5,apuesta.getGanador());
             insertaApuesta.setInt(6,apuesta.getPuntuacion());
             insertaApuesta.setString(7,apuesta.getTipoVictoria().toString());
+            insertaApuesta.registerOutParameter(8, Types.CHAR);
 
             insertado=insertaApuesta.execute();
+            fecha=insertaApuesta.getString(8);
 
         } catch (SQLException throwables) {
 
             Incidencia incidencia=new Incidencia();
             incidencia.setUsuario(apuesta.getUsuario());
-            //incidencia.setFecha(); --> Necesitamos guardar la fecha
+            incidencia.setFecha(fecha);
             incidencia.setEvento(Integer.toString(apuesta.getCombate()));
             incidencia.setImporte(Float.toString(apuesta.getCantidad()));
             incidencia.setMotivoRechazo(throwables.toString());
