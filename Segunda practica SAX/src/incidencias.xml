@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<incidencias>
+    <incidencia>
+        <usuario>Amador</usuario>
+        <fecha>18:23:54 - 2 22/2/2021</fecha>
+        <evento>3</evento>
+        <importe>12.0</importe>
+        <motivoRechazo>Infracción de la restricción UNIQUE KEY 'UN_APUESTAS'. No se puede insertar una clave duplicada en el objeto 'dbo.APUESTAS'. El valor de la clave duplicada es (Amador, 3).</motivoRechazo>
+    </incidencia>
+    <incidencia>
+        <usuario>Jesus</usuario>
+        <fecha>18:23:54 - 2 22/2/2021</fecha>
+        <evento>4</evento>
+        <importe>8.0</importe>
+        <motivoRechazo>Infracción de la restricción UNIQUE KEY 'UN_APUESTAS'. No se puede insertar una clave duplicada en el objeto 'dbo.APUESTAS'. El valor de la clave duplicada es (Jesus, 4).</motivoRechazo>
+    </incidencia>
+    <incidencia>
+        <usuario>Alejandro</usuario>
+        <fecha>18:23:54 - 2 22/2/2021</fecha>
+        <evento>3</evento>
+        <importe>4.0</importe>
+        <motivoRechazo>Infracción de la restricción UNIQUE KEY 'UN_APUESTAS'. No se puede insertar una clave duplicada en el objeto 'dbo.APUESTAS'. El valor de la clave duplicada es (Alejandro, 3).</motivoRechazo>
+    </incidencia>
+    <incidencia>
+        <usuario>Amador</usuario>
+        <fecha>18:23:54 - 2 22/2/2021</fecha>
+        <evento>4</evento>
+        <importe>4.0</importe>
+        <motivoRechazo>Infracción de la restricción UNIQUE KEY 'UN_APUESTAS'. No se puede insertar una clave duplicada en el objeto 'dbo.APUESTAS'. El valor de la clave duplicada es (Amador, 4).</motivoRechazo>
+    </incidencia>
+    <incidencia>
+        <usuario>Alejandro</usuario>
+        <fecha>18:23:54 - 2 22/2/2021</fecha>
+        <evento>4</evento>
+        <importe>6.5</importe>
+        <motivoRechazo>Infracción de la restricción UNIQUE KEY 'UN_APUESTAS'. No se puede insertar una clave duplicada en el objeto 'dbo.APUESTAS'. El valor de la clave duplicada es (Alejandro, 4).</motivoRechazo>
+    </incidencia>
+    <incidencia>
+        <usuario>Jesus</usuario>
+        <fecha>18:23:54 - 2 22/2/2021</fecha>
+        <evento>3</evento>
+        <importe>7.0</importe>
+        <motivoRechazo>Infracción de la restricción UNIQUE KEY 'UN_APUESTAS'. No se puede insertar una clave duplicada en el objeto 'dbo.APUESTAS'. El valor de la clave duplicada es (Jesus, 3).</motivoRechazo>
+    </incidencia>
+</incidencias>

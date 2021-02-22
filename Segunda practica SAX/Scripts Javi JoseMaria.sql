@@ -26,14 +26,13 @@ SELECT TO apuestas
         @CUOTA float,
         @GANADOR VARCHAR(50),
         @PUNTUACION SMALLINT,
-        @TIPOVICTORIA VARCHAR(20),
-		@FECHA CHAR(10)
+        @TIPOVICTORIA VARCHAR(20)
     AS
     BEGIN
 	DECLARE @IDINSERTADO SMALLINT --Variable para almacenar el nuevo ID
 	BEGIN TRANSACTION
         INSERT INTO APUESTAS(NOMBRE_USUARIO,ID_COMBATE,CANTIDAD,CUOTA) VALUES (@NOMBRE_USUARIO,@ID_COMBATE,@CANTIDAD,@CUOTA)
-		SELECT @IDINSERTADO = MAX(ID) FROM APUESTAS --@@IDENTITY daba problemas al usarlo, no sacaba el ultimo ID generado y entraba en conflicto con las FK de las tablas de tipo de apuestas
+		SELECT @IDINSERTADO = MAX(ID) FROM APUESTAS --@@IDENTITY devuelve el ultimo ID insertado que en este caso era el de la ultima transaccion autogenerada que no se corresponde con el de la ultima apuesta
 			WHERE @NOMBRE_USUARIO=NOMBRE_USUARIO AND
 					@ID_COMBATE=ID_COMBATE AND
 					@CANTIDAD=CANTIDAD 	--Condiciones del where necesarias en caso de no insertar apuesta correctamente es necesario
@@ -49,11 +48,7 @@ SELECT TO apuestas
 					INSERT INTO APUESTAS_POR_PUNTUACION (ID_APUESTA, PUNTUACION) VALUES (@IDINSERTADO, @PUNTUACION)
 			
 			COMMIT
-			SELECT @FECHA= FECHA FROM APUESTAS
-				WHERE ID=@IDINSERTADO
 		END
-		ELSE
-			ROLLBACK
     END
 GO
 
@@ -70,14 +65,13 @@ GO
 
 BEGIN TRANSACTION
 
-DECLARE @FECHA VARCHAR(10)
 
-EXECUTE InstertarApuesta 'Amador',3, 12, 3, 'Mac Janson', -1, 'JAVI', @FECHA
-EXECUTE InstertarApuesta 'Jesus',4, 8, 2.3, 'Mac Janson', -1, 'JAVI', @FECHA
-EXECUTE InstertarApuesta 'Alejandro',3, 4, 3, 'Indefinido', 7, 'JAVI', @FECHA
-EXECUTE InstertarApuesta 'Amador',4, 4, 3, 'Indefinido', 32, 'JAVI', @FECHA
-EXECUTE InstertarApuesta 'Alejandro',4, 6.5, 3.14, 'Indefinido', -1, 'PUNTUACION', @FECHA
-EXECUTE InstertarApuesta 'Jesus',3, 7, 8.2, 'Indefinido', -1, 'KO', @FECHA
+EXECUTE InstertarApuesta 'Amador',3, 12, 3, 'Mac Janson', -1, 'JAVI'
+EXECUTE InstertarApuesta 'Jesus',4, 8, 2.3, 'Mac Janson', -1, 'JAVI'
+EXECUTE InstertarApuesta 'Alejandro',3, 4, 3, 'Indefinido', 7, 'JAVI'
+EXECUTE InstertarApuesta 'Amador',4, 4, 3, 'Indefinido', 32, 'JAVI'
+EXECUTE InstertarApuesta 'Alejandro',4, 6.5, 3.14, 'Indefinido', -1, 'PUNTUACION'
+EXECUTE InstertarApuesta 'Jesus',3, 7, 8.2, 'Indefinido', -1, 'KO'
 
---ROLLBACK
+ROLLBACK
 --commit

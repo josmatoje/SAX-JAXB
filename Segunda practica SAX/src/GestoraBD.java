@@ -1,4 +1,6 @@
 import java.sql.*;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 import errores.*;
@@ -8,10 +10,16 @@ public class GestoraBD {
     private ManejadorErrores errorHandler;
     private Incidencias incidenciasSucedidas;
 
+    /*
+    Entradas: Un objeto apuesta, una callableStatement al procedimiento de insercion de apuesta y un objeto manejador de errores
+    Salida: Un booleano que comprueba si se ha realizado el procedimiento con exito
+    Precondiciones: Se espera una llamada a un procedimiento creado para la base de datos de este ejercicio
+    Postcondiciones: Deberá insertarse el objeto dado en la bbdd o en su defecto genearse un objeto incidencia
+     */
     public static boolean insertarApuestaConTipo (Apuesta apuesta, CallableStatement insertaApuesta, ManejadorErrores me){
         boolean insertado=false;
-        GregorianCalendar fechaApuesta = new GregorianCalendar();
-        String fecha= fechaApuesta.toString();
+        GregorianCalendar fechaIncidencia = new GregorianCalendar();
+
         try {
 
             insertaApuesta.setString(1,apuesta.getUsuario());
@@ -21,19 +29,17 @@ public class GestoraBD {
             insertaApuesta.setString(5,apuesta.getGanador());
             insertaApuesta.setInt(6,apuesta.getPuntuacion());
             insertaApuesta.setString(7,apuesta.getTipoVictoria().toString());
-            insertaApuesta.registerOutParameter(8, Types.CHAR);
 
             insertado=insertaApuesta.execute();
-            fecha=insertaApuesta.getString(8);
 
         } catch (SQLException throwables) {
 
             Incidencia incidencia=new Incidencia();
             incidencia.setUsuario(apuesta.getUsuario());
-            incidencia.setFecha(fecha);
+            incidencia.setFecha(fechaIncidencia.get(Calendar.HOUR_OF_DAY)+":"+fechaIncidencia.get(Calendar.MINUTE)+":"+fechaIncidencia.get(Calendar.SECOND)+" - "+fechaIncidencia.get(Calendar.DAY_OF_MONTH)+"/"+(fechaIncidencia.get(Calendar.MONTH)+1)+"/"+fechaIncidencia.get(Calendar.YEAR));
             incidencia.setEvento(Integer.toString(apuesta.getCombate()));
             incidencia.setImporte(Float.toString(apuesta.getCantidad()));
-            incidencia.setMotivoRechazo(throwables.toString());
+            incidencia.setMotivoRechazo(throwables.getMessage());
             me.anhadirIncidencia(incidencia);
         }
 
@@ -48,7 +54,7 @@ public class GestoraBD {
     public static boolean insertarApuesta(Apuesta apuesta, Connection conexion){
         
         String sentPrepApuesta="INSERT INTO APUESTAS(NOMBRE_USUARIO,ID_COMBATE,CANTIDAD,CUOTA) VALUES (?,?,?,?) " +
-                                    "SELECT TOP(1) ID FROM APUESTAS " +
+                                    "SELECT MAX(ID) FROM APUESTAS " +
                                     /*"WHERE NOMBRE_USUARIO LIKE ? AND " +//Con el WHERE comprobamos que es la misma apuesta
                                             "ID_COMBATE = ? AND " +
                                             "CANTIDAD = ? AND " +

@@ -5,6 +5,10 @@ import java.io.File;
 public class ManejadorErrores {
     Incidencias listaIncidencias;
 
+    public ManejadorErrores(){
+        listaIncidencias=new Incidencias();
+    }
+
     public void abrirIncidenciasJAXB (File archivoXML){
         JAXBContext contexto;
         try {
@@ -21,12 +25,13 @@ public class ManejadorErrores {
     }
 
     public void guardarIncidencias(File archivoXML) {
+        ObjectFactory of = new ObjectFactory();
         JAXBContext contexto;
         try {
             contexto = JAXBContext.newInstance(Incidencias.class);
             Marshaller marshalero = contexto.createMarshaller();
             marshalero.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            marshalero.marshal(listaIncidencias,archivoXML);
+            marshalero.marshal(of.createIncidencias(listaIncidencias),archivoXML);
         } catch (JAXBException e) {
             e.printStackTrace();
         }

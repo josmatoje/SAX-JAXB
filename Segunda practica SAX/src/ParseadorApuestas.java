@@ -7,6 +7,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.io.File;
+import java.io.IOException;
 import java.sql.*;
 
 public class ParseadorApuestas extends DefaultHandler {
@@ -40,13 +41,12 @@ public class ParseadorApuestas extends DefaultHandler {
     @Override
     public void startDocument(){
         try {
-            String sentPrepApuesta = "EXECUTE dbo.InstertarApuesta ?,?,?,?,?,?,?,?";
+            String sentPrepApuesta = "EXECUTE InstertarApuesta ?,?,?,?,?,?,?";
             statementApuesta = conexionbbdd.prepareCall(sentPrepApuesta);
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        me.abrirIncidenciasJAXB(incidencias);
 
     }
     @Override
@@ -55,6 +55,14 @@ public class ParseadorApuestas extends DefaultHandler {
             getConexionbbdd().close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
+        }
+        //Si no existe el archivo lo creamos
+        if(!incidencias.exists()) {
+            try {
+                incidencias.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         me.guardarIncidencias(incidencias);
     }
